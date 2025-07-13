@@ -1,14 +1,16 @@
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
+import Image from "next/image";
 
 const LandingPage = () => {
   return (
     <div className="w-full h-screen bg-[#f1f1f1] pt-1">
       <div className="textStructure mt-30 px-12">
         {["We create", "eye opening", "presentations"].map((elem, index) => (
-          <div className="masker ">
+          <div className="masker" key={index}>
             <div className="w-fit flex items-baseline">
-            {index === 1 && <div className="w-[9vw] h-[5.7vw] bg-amber-500  mr-[1vw] rounded-md">
+            {index === 1 && <div className="w-[9vw] h-[5.7vw] bg-amber-500  mr-[1vw] rounded-md overflow-hidden">
+              <Image src="/banner-img.jpg" width="100" height="100" alt="Ochi" className="w-100 h-[100%]"/>
             </div>}
             <h1
               key={index}
