@@ -1,4 +1,5 @@
 import React from "react";
+import { MdArrowOutward } from "react-icons/md";
 
 const LandingPage = () => {
   return (
@@ -6,14 +7,32 @@ const LandingPage = () => {
       <div className="textStructure mt-30 px-12">
         {["We create", "eye opening", "presentations"].map((elem, index) => (
           <div className="masker ">
+            <div className="w-fit flex items-baseline">
+            {index === 1 && <div className="w-[9vw] h-[5.7vw] bg-amber-500  mr-[1vw] rounded-md">
+            </div>}
             <h1
               key={index}
-              className="uppercase font-[foundersGrotesk] font-normal text-[#212121] text-9xl leading-[100px]"
+              className="uppercase font-[foundersGrotesk] font-normal text-[#212121] text-[9vw] leading-[6.8vw]"
             >
               {elem}
             </h1>
+            </div>
           </div>
         ))}
+      </div>
+      <div className="border-t-[1px] border-[#2121214D] w-full mt-25 flex justify-between items-center py-3 px-12  font-[NeueMontreal] text-[#212121] font-normal">
+        {[
+          "For public and private companies",
+          "From the first pitch to IPO",
+        ].map((elem, index) => (
+          <p key={index}>
+            {elem}
+          </p>
+        ))}
+        <div className="start flex items-center gap-1">
+        <div className="uppercase border-1 rounded-full px-2 py-1 text-sm">Start the project</div>
+        <div className="rounded-full border-1 w-8 h-8 flex justify-center items-center"><MdArrowOutward /></div>
+        </div>
       </div>
     </div>
   );
